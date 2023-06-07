@@ -10,7 +10,7 @@ on:
 
 jobs:
   lint:
-    name: Lint ✔
+    name: Lint 🧹
     runs-on: unbuntu-latest
     steps:
       - name: Checkout code 📩
@@ -21,7 +21,7 @@ jobs:
         with:
           version: "^1.10.0"
           token: ${{ SECRETS.GITHUB_TOKEN }}
-      - name: Lint ✔
+      - name: Lint 🧹 
         run: |
           selene ./scr
 
