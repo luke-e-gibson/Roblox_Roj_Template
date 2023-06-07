@@ -1,3 +1,5 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
 return function()
-	print("Hello, world!")
+	print(script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name)
 end

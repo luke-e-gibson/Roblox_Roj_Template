@@ -27,6 +27,7 @@
       "$properties": {
         "FilteringEnabled": true
       },
+
       "Baseplate": {
         "$className": "Part",
         "$properties": {
@@ -44,7 +45,7 @@
         "Brightness": 2,
         "GlobalShadows": true,
         "Outlines": false,
-        "Technology": "future"
+        "Technology": "Future"
       }
     },
     "SoundService": {

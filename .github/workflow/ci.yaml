@@ -1,0 +1,36 @@
+name: CI
+
+on:
+   push:
+      branches:
+        - main
+   pull_request:
+      branches:
+        - main
+
+jobs:
+  lint:
+    name: Lint ✔
+    runs_on: unbuntu-latest
+    stesp:
+      - name: Checkout code 📩
+        use: actions/checkout@v3
+
+      - uses: Roblox/setup-foreman
+        name: Install Foreman 📩
+        with:
+          version: "^1.10.0"
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+      - name: Lint ✔
+        run: |
+          selene ./scr
+
+    style: 
+      name: Style 🧹
+      runs-on: ubuntu-latest
+      steps: 
+        - uses: actions/checkout@v3
+        - uses: JhonnyMorganz/stylua-actions@1.0.0
+          with: 
+            token: ${{SECRETS.GITHUB_TOKEN}}
+            args: --check .
